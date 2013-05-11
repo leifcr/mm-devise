@@ -8,13 +8,13 @@ Gem::Specification.new do |s|
   s.date        = "2011-06-01"
   s.summary     = %Q{Support for using MongoMapper ORM with devise}
   s.description = %Q{dm-devise adds MongoMapper support to devise (http://github.com/plataformatec/devise) for authentication support for Rails}
-  s.email       = "kmandrup@gmail.com"
-  s.homepage    = "http://github.com/kristianmandrup/mm-devise"
-  s.authors     = ["Kristian Mandrup"]
+  s.email       = "roboteti@icloud.com"
+  s.homepage    = "http://github.com/roboteti/mm-devise"
+  s.authors     = ["J-P Teti", "Kristian Mandrup"]
   s.files       = Dir.glob("lib/**/*") + %w(Changelog.txt mm-devise.gemspec Gemfile LICENSE Rakefile README.markdown)
   s.test_files  = Dir.glob("test/**/*")
 
   s.add_dependency 'mongo_mapper', '>= 0.9.0'
-  s.add_dependency 'devise', '>= 1.2'
+  s.add_dependency 'devise', '>= 2.0'
   s.add_dependency "SystemTimer", "~> 1.2" if RUBY_VERSION < "1.9"
 end

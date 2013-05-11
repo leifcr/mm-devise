@@ -6,20 +6,17 @@
 
 This README only covers `mm-devise` specifics. Make sure to read the [devise README](http://github.com/plataformatec/devise/blob/master/README.rdoc)
 
-## Status update, June 2011
-
-Recently upgraded to (hopefully!) support Devise > 1.2 and MongoMapper 0.9.0.
 
 ## Installation
 
 Add `devise`, `mm-devise` and `mongo_mapper` gems to your Gemfile (your Rails app Gemfile).
 
-    gem 'mongo_mapper',           '~> 0.9.0'
+    gem 'mongo_mapper'
     # You'll want this to for better mongo driver performance
     gem 'bson_ext'
 
-    gem 'devise',                 '~> 1.3.4'
-    gem 'mm-devise',              '~> 1.2.0'
+    gem 'devise'
+    gem 'mm-devise', :git => "git://github.com/roboteti/mm-devise"
 
 Use bundler to install all required gems in your Rails 3 app
 
@@ -28,7 +25,7 @@ Use bundler to install all required gems in your Rails 3 app
 Run the devise install generator, followed by the mm-devise model generator:
 
     rails generate devise:install
-    rails generate mongo_mapper:devise MODEL
+    rails generate devise MODEL
 
 The devise install generator will install an initializer
 (`config/inititializer/devise.rb`) which describes ALL Devise's configuration
@@ -40,35 +37,13 @@ NOTE: The model generator should do this automatically.
 
 To add Devise to any of your models using the generator:
 
-    rails generate mongo_mapper:devise MODEL
+     rails generate devise MODEL
 
 Example: create a User model for use with Devise
 
-    rails generate mongo_mapper:devise User
+    rails generate devise MODEL
 
 Read the README for devise at [devise README](http://github.com/plataformatec/devise/blob/master/README.rdoc)
-
-## Test Driven Development - extending this project
-
-To develop on this project using TDD, requires the following setup.
-Clone this project into a container folder, fx <code>/projects</code>, so you have fx <code>/projects/mm-devise</code>
-In the same container folder clone <code>devise</code> from github
-
-Example:
-
-<pre>git clone http://github.com/kristianmandrup/mm-devise.git
-git clone http://github.com/plataformatec/devise.git
-cd mm-devise
-bundle install
-rake test</pre>
-
-## Gem install
-
-<pre>$ rake install</pre>
-
-## Gem release (push to RubyGems)
-
-<pre>$ gem push pkg/mm-devis-xxxx.gem</pre>
 
 ## Note on Patches/Pull Requests
 
@@ -82,7 +57,8 @@ rake test</pre>
 
 ## Maintainers
 
-*Kristian Mandrup*
+*J-P Teti*
+*Kristian Mandrup* (probably abandoned)
 
 ## Contributors
 
@@ -97,6 +73,9 @@ For *mm-devise* specific issues, please create an issue on GitHub at: [mm-devise
 
 ## Copyright
 
-Copyright (c) 2010 Kristian Mandrup. See LICENSE for details.
+Copyright (c) 2013 J-P Teti.
+Copyright (c) 2010 Kristian Mandrup.
+
+See LICENSE for details.
 
 
