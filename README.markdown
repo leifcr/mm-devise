@@ -1,5 +1,8 @@
 # MongoMapper for Devise
 
+NOTE: No longer maintained, as mongomapper is no longer maintained.
+
+
 `mm-devise` will let you use [devise](http://github.com/plataformatec/devise) with [MongoMapper](http://github.com/jnunemaker/mongomapper).
 
 `mm-devise` is intended for use with `Rails 3+` and `Devise 1.2` and above. It may work with earlier versions of devise.
